@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Swap Values</title>
+ <link rel="stylesheet" href="./output.css">
+</head>
+<body class="bg-gray-900 text-white">
+  <header class="w-screen h-screen flex justify-center items-center">
+    <div class="w-1/2 h-1/2 border-4 rounded-2xl border-amber-200 grid grid-rows-[20%_80%] p-6">
+      
+      <!-- Title -->
+      <div class="flex justify-center items-center">
+        <h1 class="text-4xl font-bold">Swap Value</h1>
+      </div>
+
+      <!-- Input fields + button -->
+      <div class="flex flex-col justify-center gap-4 text-2xl">
+        <label for="first">First Number</label>
+        <input id="first" type="number" class="p-2 rounded text-black">
+
+        <label for="second">Second Number</label>
+        <input id="second" type="number" class="p-2 rounded text-black">
+
+        <button onclick="swapValues()" class="mt-4 bg-amber-400 text-black font-semibold py-2 rounded-lg hover:bg-amber-500">
+          Swap
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <script>
+   
+   function swapValues(){
+    let first=document.getElementById("first");
+    let second=document.getElementById("second");
+  
+    let temp =first.value;
+    first.value=second.value;
+    second.value=temp;
+
+   }
+  </script>
+</body>
+</html>
